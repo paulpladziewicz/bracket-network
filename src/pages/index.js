@@ -1,10 +1,18 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
-import en from "../locales/en";
-import es from "../locales/es";
 
 import Layout from "../components/Layout";
 import Navbar from "../components/nav/Navbar";
+
+const en = {
+  title: "Title",
+  desc: "Yes, English.",
+};
+const es = {
+  title: "Title",
+  desc: "Yes, Español.",
+};
+
 
 function HomePage() {
   const router = useRouter();

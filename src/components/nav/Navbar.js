@@ -1,9 +1,17 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import en from "../../locales/en";
-import es from "../../locales/es";
 import MobileMenu from "./MobileMenu";
+
+const en = {
+  title: "Title",
+  desc: "Yes, English.",
+};
+const es = {
+  title: "Title",
+  desc: "Yes, Español.",
+};
+
 
 function Navbar(props) {
   const [open, setOpen] = useState(false);
@@ -34,11 +42,11 @@ function Navbar(props) {
       <MobileMenu open={open} toggleOpen={(f) => setOpen(f)} />
 
       <ul className="hidden md:flex">
-        <Link href="/about" className="mr-8">
-          About
+        <Link href="/about">
+          <a className="block mr-8">About</a>
         </Link>
-        <Link href="#contact" className="mr-8">
-          Contact
+        <Link href="#contact">
+          <a className="block mr-8">Contact</a>
         </Link>
       </ul>
 

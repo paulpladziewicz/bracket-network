@@ -1,8 +1,14 @@
 import { useRouter } from "next/router";
-import en from "../locales/en";
-import es from "../locales/es";
-
 import Navbar from "../components/nav/Navbar";
+
+const en = {
+  title: "Title",
+  desc: "Yes, English.",
+};
+const es = {
+  title: "Title",
+  desc: "Yes, Español.",
+};
 
 function HomePage() {
   const router = useRouter();
@@ -12,8 +18,9 @@ function HomePage() {
   return (
     <div>
       <Navbar />
-      <div className="text-xl font-bold text-indigo-500">{t.about.title}</div>
-      <p>{t.about.desc}</p>
+      <div className="text-xl font-bold text-indigo-500">{t.title}</div>
+      <img className="w-1/3" src="/images/stock-image.jpg" alt="" />
+      <p>{t.desc}</p>
     </div>
   );
 }
